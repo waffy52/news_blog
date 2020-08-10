@@ -1,7 +1,7 @@
 {
   "name": "news_blog",
   "version": "1.0.0",
-  "description": "SImple page with blogs posts",
+  "description": "Simple page with blogs posts",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",

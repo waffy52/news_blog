@@ -10,10 +10,6 @@ router.use(function (req, res, next) {
   next();
 });
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// });
-
 router.get('/', function(req, res){
   res.sendFile(path + 'index.html');
 });
@@ -30,13 +26,16 @@ router.get('/contact', function(req, res){
   res.sendFile(path + 'contact.html');
 });
 
+router.get('*', function(req, res) {
+  // Invalid request
+  res.sendFile(path + 'not-found.html');
+});
+
 app.set('view engine', 'html');
 // this will enable our application to parse our user’s entered data.
 app.use(express.urlencoded({ extended: true }));
-
 app.use(express.static(path));
 app.use('/', router);
-
 
 app.listen(port, () => {
   console.log(`News blog listening on port ${port}!`);
