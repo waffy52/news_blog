@@ -31,6 +31,10 @@ router.get('/admin', function (req, res) {
   res.sendFile(path + 'admin.html');
 });
 
+router.get('/add-post', function (req, res) {
+  res.sendFile(path + 'add-post.html');
+});
+
 router.get('*', function (req, res) {
   // Invalid request
   res.sendFile(path + 'not-found.html');
