@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const Post = new Schema(
   {
     title: { type: String, required: true },
-    text: { type: String, required: true },
+    blogPostText: { type: String, required: true },
     source: { type: String, required: true },
   },
   {
