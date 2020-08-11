@@ -40,6 +40,10 @@ router.get('*', function (req, res) {
   res.sendFile(path + 'not-found.html');
 });
 
+router.post('/submit-form', (req, res) => {
+  res.redirect('add-post.html');
+});
+
 app.set('view engine', 'html');
 // this will enable our application to parse our user’s entered data.
 app.use(express.urlencoded({ extended: true }));
