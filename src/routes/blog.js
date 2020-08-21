@@ -33,10 +33,6 @@ router.get('/admin-panel', function (req, res) {
   res.sendFile(path.resolve('views/admin-panel.html'));
 });
 
-router.post('/login-admin', (req, res) => {
-  res.redirect('admin-panel.html');
-});
-
 router.post('/create-post', function (req, res) {
   post.create(req, res);
 });
