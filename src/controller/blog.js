@@ -7,7 +7,7 @@ exports.create = function (req, res) {
     if (err) {
       res.status(400).send('Unable to save post to database');
     } else {
-      res.redirect('admin-panel.html');
+      res.redirect('admin-home.html');
     }
   });
 };
