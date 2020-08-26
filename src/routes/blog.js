@@ -29,8 +29,12 @@ router.get('/admin-login', function (req, res) {
   res.sendFile(path.resolve('views/admin-login.html'));
 });
 
-router.get('/admin-panel', function (req, res) {
-  res.sendFile(path.resolve('views/admin-panel.html'));
+router.get('/admin-home', function (req, res) {
+  res.sendFile(path.resolve('views/admin-home.html'));
+});
+
+router.get('/admin-blogs', function (req, res) {
+  res.sendFile(path.resolve('views/admin-blogs.html'));
 });
 
 router.post('/create-post', function (req, res) {
